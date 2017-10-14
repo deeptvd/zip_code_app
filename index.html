@@ -110,15 +110,16 @@
             document.querySelector('.icon-remove').style.display = 'none';
             document.querySelector('.icon-check').style.display = 'none';
             //Show correct icon
-            document.querySelector(`.icon-${icon}`).style.display = 'inline-flex';
+            if(icon != null){
+                document.querySelector(`.icon-${icon}`).style.display = 'inline-flex';
+            }
         }
 
         //Delete location box 
         function deleteLocation(e){
             if(e.target.className == 'delete'){
                 document.querySelector('.message').remove();
-                document.querySelector('.zip').value = ''; 
-                document.querySelector('.icon-check').remove();
+                document.querySelector('.zip').value = ' '; 
             }
         }
     </script>
